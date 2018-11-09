@@ -1,0 +1,94 @@
+<template>
+  <div class="salesreturn">
+    <!-- 頭部導航 -->
+    <headers title="退貨/換貨" back></headers>
+    <div class="outter">
+      <div class="pack">
+        <img src="../../assets/personal_center_images/pack.png" alt="">
+      </div>
+      <div class="con" v-html="data">
+      </div>
+      <p> </p>
+      <p> </p>
+      <p> </p>
+    </div>
+  </div>
+</template>
+<script>
+import headers from "@/components/header";
+export default {
+  name: "pack_service",
+  created() {
+    this.init();
+  },
+  mounted() {},
+  data() {
+    return {
+      //展示數據
+      data: ""
+    };
+  },
+  watch: {},
+  computed: {},
+  methods: {
+    init() {
+      this.$Axios.post("/v1/site/cms-view", { id: 59 }).then(res => {
+        if (res.status == 200) {
+          this.data = res.data.data.content.replace(/：/g, "");
+          console.log(this.data);
+        }
+      });
+    }
+  },
+  components: {
+    headers
+  }
+};
+</script>
+<style lang="scss" scoped>
+@import "../../styles/mixin.scss";
+.salesreturn {
+  width: 100%;
+  background-color: #f5f5f5;
+
+  .outter {
+    width: 100%;
+    padding: 15px 21px;
+    background-color: #fff;
+    margin-top: 11px;
+    .pack {
+      width: 100%;
+      height: 214px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .con {
+      background-color: #fff;
+    }
+
+    .con /deep/ p {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      font-size: 13px;
+
+      span {
+        margin-bottom: 14px;
+      }
+    }
+
+    .con /deep/ p:nth-child(1) {
+      span {
+        display: none;
+      }
+    }
+
+    p {
+      width: 100%;
+      height: 10px;
+    }
+  }
+}
+</style>
