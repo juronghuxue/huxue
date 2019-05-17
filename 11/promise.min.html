@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>promise多请求并发处理</title>
+<link rel="stylesheet" href="">
+</head>
+<body>
+<script>var promiseArray=[];promiseArray.push(promiseResove(1)),promiseArray.push(promiseResove(3)),promiseArray.push(promiseResove(2));var handlePromise=Promise.all(promiseArray.map(function(e){return e.catch(function(e){return e})}));handlePromise.then(function(e){console.log("all promise are resolved",e)}).catch(function(e){console.log("promise reject failed reason",e)})</script>
+</body>
+</html>

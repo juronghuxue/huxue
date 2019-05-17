@@ -1,0 +1,6 @@
+let name:string = `Gene`;
+let age:number = 37;
+let sentence:string = `Hello,my name is ${name}.
+
+I be ${age+1} years old next month`;
+console.log(sentence);

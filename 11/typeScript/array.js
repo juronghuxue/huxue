@@ -1,0 +1,23 @@
+var list = [1, 2, 3];
+console.log(list);
+console.log('****************************');
+var list2 = [1, 2, 3];
+console.log(list2);
+console.log('*******************************');
+var x;
+x = ['hello', 10];
+console.log(x);
+console.log(x[0].substr(1));
+x[3] = "world";
+console.log(x);
+console.log('*******************************');
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 2] = "Red";
+    Color[Color["Green"] = 4] = "Green";
+    Color[Color["Blue"] = 6] = "Blue";
+})(Color || (Color = {}));
+var c = Color.Blue;
+console.log(c);
+var colorName = Color[2];
+console.log(colorName);

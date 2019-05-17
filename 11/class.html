@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>class应用</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		// function Point(x,y){
+		// 	this.x = x;
+		// 	this.y = y;
+		// }
+		// Point.prototype.toString = function(){
+		// 	return '{'+this.x+','+this.y+'}';
+		// };
+		// var p = new Point(2,3);
+		// console.log(p.toString());
+
+		// class Point{
+		// 	constructor(x,y){
+		// 		this.x = x;
+		// 		this.y = y;
+		// 	}
+		// 	toString(){
+		// 		return '{'+this.x+','+this.y+'}';
+		// 	}
+		// }
+		// var p = new Point(4,5);
+		// console.log(p.toString());
+
+		// class Point{
+
+		// }
+		// console.log(typeof Point);
+		// console.log(Point === Point.prototype.constructor);
+
+		// class Bar{
+		// 	doStuff(){
+				
+		// 	}
+		// }
+		// var b = new Bar();
+
+		// class Point{
+		// 	constructor(){
+
+		// 	}
+		// }
+		// Object.assign(Point.prototype,{
+		// 	toString(){},
+		// 	toValue(){}
+		// })
+		// console.log(Point.prototype.constructor === Point);
+
+		// class MyClass{
+		// 	constructor(){
+
+		// 	}
+		// 	get prop(){
+		// 		return 'getter';
+		// 	}
+		// 	set prop(value){
+		// 		console.log('setter: '+value);
+		// 	}
+		// }
+		// let inst = new MyClass();
+		// inst.prop = 123;
+		// inst.prop
+
+		// let methodName = 'getArea';
+		// class Square{
+		// 	constructor(length){
+		// 		console.log(length);
+		// 	}
+		// 	[methodName](){
+		// 		console.log(methodName);
+		// 	}
+		// }
+		// var s = new Square(4);
+
+		// const MyClass = class Me{
+		// 	getClassName(){
+		// 		return Me.name;
+		// 	}
+		// }
+
+		// let person = new class{
+		// 	constructor(name){
+		// 		this.name = name;
+		// 	}
+		// 	sayName(){
+		// 		console.log(this.name);
+		// 	}
+		// }('张三');
+		// person.sayName();
+
+		// class Foo{
+		// 	static classMethod(){
+		// 		return 'hello';
+		// 	}
+		// }
+		// console.log(Foo.classMethod());
+
+		// var foo = new Foo();
+		// console.log(foo.classMethod());
+
+		// class Foo{
+		// 	static bar(){
+		// 		this.bac();
+		// 	}
+		// 	static bac(){
+		// 		console.log('hello');
+		// 	}
+		// 	baz(){
+		// 		console.log('world');
+		// 	}
+		// }
+		// Foo.bar();
+
+		// var f = new Foo();
+		// f.baz();
+
+		// class Foo{}
+		// new Foo();
+
+		// {
+		// 	let Foo = class{};
+		// 	class Bar extends Foo{}
+		// }
+
+		// class Point{}
+		// console.log(Point.name);
+
+		// class Foo{
+		// 	constructor(...args){
+		// 		this.args = args;
+		// 	}
+		// 	*[Symbol.iterator](){
+		// 		for(let arg of this.args){
+		// 			yield arg;
+		// 		}
+		// 	}
+		// }
+		// for(let x of new Foo('hello','world')){
+		// 	console.log(x);
+		// }
+
+		// class Foo{
+		// 	static classMethod(){
+		// 		return 'hello';
+		// 	}
+		// }
+		// console.log(Foo.classMethod());
+		// var foo = new Foo();
+		// foo.classMethod()
+
+		// class Foo{
+		// 	static classMethod(){
+		// 		return 'hello';
+		// 	}
+		// }
+		// class Bar extends Foo{
+
+		// }
+		// console.log(Bar.classMethod());
+
+		// class Foo{
+		// 	static classMethod(){
+		// 		return 'hello';
+		// 	}
+		// }
+		// class Bar extends Foo{
+		// 	static classMethod(){
+		// 		return super.classMethod()+',too';
+		// 	}
+		// }
+		// console.log(Bar.classMethod());
+
+		// class IncreasingCounter{
+		// 	_count = 0;
+		// 	get value(){
+		// 		console.log('Getting the current value');
+		// 		return this._count;
+		// 	}
+		// 	increment(){
+		// 		this._count++;
+		// 	}
+		// }
+
+		// class Foo{
+
+		// }
+		// Foo.prop = 1;
+		// console.log(Foo.prop);
+
+		// let c = class MyClass{
+		// 	static myStaticProp = 42;
+		// 	constructor(){
+		// 		console.log(MyClass.myStaticProp);
+		// 	}
+		// }
+
+		// class Foo{
+
+		// }
+		// Foo.prop = 1;
+		// class Foo{
+		// 	static prop = 1;
+		// }
+
+		// class Widget{
+		// 	foo(baz){
+		// 		this._bar(baz);
+		// 	}
+		// 	_baz(baz){
+		// 		return this.snaf = baz;
+		// 	}
+		// }
+
+		// class Point{
+		// 	constructor(x,y){
+		// 		this.x = x;
+		// 		this.y = y;
+		// 	}
+		// }
+		// class ColorPoint extends Point{
+		// 	constructor(x,y,color){
+		// 		super(x,y);
+		// 		this.color = color;
+		// 	}
+		// 	toString(){
+		// 		return this.x+this.y+this.color+' '+super.toString();
+		// 	}
+		// }
+		// let cp = new ColorPoint(1,2,'red');
+		// console.log(cp.toString());
+
+		// class Point{
+		// 	constructor(x,y){
+		// 		this.x = x;
+		// 		this.y = y;
+		// 	}
+		// }
+		// class ColorPoint extends Point{
+		// 	constructor(x,y,color){
+		// 		// this.color = color;
+		// 		super(x,y);
+		// 		this.color = color;
+		// 	}
+		// }
+		// let cp = new ColorPoint(1,2,'green');
+		// console.log(cp instanceof ColorPoint);
+		// console.log(cp instanceof Point);
+
+		// class A{
+		// 	static hello(){
+		// 		console.log('hello world');
+		// 	}
+		// }
+		// class B extends A{
+
+		// }
+		// B.hello();
+		// console.log(Object.getPrototypeOf(B) === A);
+
+		// class A{}
+		// class B extends A{
+		// 	constructor(){
+		// 		super();
+		// 	}
+		// }
+
+		// class A{
+		// 	constructor(){
+		// 		console.log(new.target.name);
+		// 	}
+		// }
+		// class B extends A{
+		// 	constructor(){
+		// 		super();
+		// 	}
+		// }
+		// new A();
+		// new B();
+
+		// class A{}
+		// class B extends A{
+		// 	m(){
+		// 		super();
+		// 	}
+		// }
+
+		// class A{
+		// 	p(){
+		// 		return 2;
+		// 	}
+		// }
+		// class B extends A{
+		// 	constructor(){
+		// 		super();
+		// 		console.log(super.p());
+		// 	}
+		// }
+
+
+		// class A{}
+		// A.prototype.x = 2;
+		// class B extends A{
+		// 	constructor(){
+		// 		super();
+		// 		// console.log(super.x);
+		// 	}
+		// 	toString(){
+		// 		console.log(super.x);
+		// 	}
+		// }
+		// var b = new B();
+		// b.toString();
+
+		// class A{
+		// 	constructor(){
+		// 		this.x = 1;
+		// 	}
+		// 	print(){
+		// 		console.log(this.x);
+		// 	}
+		// }
+		// class B extends A{
+		// 	constructor(){
+		// 		super();
+		// 		this.x = 2;
+		// 	}
+		// 	m(){
+		// 		super.print();
+		// 	}
+		// }
+		// let b = new B();
+		// b.m();
+
+		// class A{
+		// 	constructor(){
+		// 		this.x = 1;
+		// 	}
+		// }
+		// class B extends A{
+		// 	constructor(){
+		// 		super();
+		// 		this.x = 2;
+		// 		super.x = 3;
+		// 		console.log(super.x);
+		// 		console.log(this.x);
+		// 	}
+		// }
+		// let b = new B();
+
+		//解构赋值
+		// let [a,b,c] = [1,2,3];
+		// [a,b,c] = [3,1,2];
+		// console.log(a,b,c);
+
+		// let [foo, [[bar], baz]] = [1, [[2], 3]];
+		// let [foo,[[bar],baz]] = [1,[[2],3]];
+		// console.log(foo,bar,baz);
+
+		// let [ , ,third] = ["foo","bar","baz"];
+		// console.log(third);
+
+		// [0,1,2,3,4].reduce(function(pre,cur,index,array){
+		// 	console.log(pre,cur,index,array);
+		// });
+
+		// function* fibs(){
+		// 	let a = 0;
+		// 	let b = 1;
+		// 	while(true){
+		// 		yield a;
+		// 		[a,b] = [b,a+b];
+		// 	}
+		// }
+		// let [first,second,third,fourth,fifth,sixth] = fibs();
+		// console.log(sixth);
+
+		// let [foo = true] = [];
+		// console.log(foo);
+
+		// let [x,y = 'b'] = ['a',undefined];
+		// console.log(x,y);
+
+		// function toString(object) {
+  		//           console.log(Object.prototype.toString.call(object));
+  		//       }
+  		//       toString('');
+
+  		// let a = {
+  		// 	valueOf(){
+  		// 		return 0;
+  		// 	},
+  		// 	toString(){
+  		// 		return "1";
+  		// 	},
+  		// 	[Symbol.toPrimitive](){
+  		// 		return 2;
+  		// 	}
+  		// }
+  		// console.log(1+a);
+  		// console.log('1'+a);
+
+  		// console.log([1,2]+[2,1]);
+
+  		// let {foo,bar} = {foo:"aaa",bar:"bbb"};
+  		// console.log(foo,bar);
+
+  		// let {baz} = {foo:"aaa",bar:"bbb"};
+  		// console.log(baz);
+
+  		// let {foo:baz} = {foo:'aaa',bar:'bbb'};
+  		// console.log(foo);
+
+  		// let obj = {first:'hello',last:'world'};
+  		// let {first:f,last:l} = obj
+  		// console.log(f,l);
+
+  		// let obj = {
+  		// 	p:[
+  		// 		'hello',
+  		// 		{y:'world'}
+  		// 	]
+  		// }
+  		// let{p:[x,{y}]} = obj;
+  		// console.log(x,y);
+
+  		// let obj = {};
+  		// let arr = [];
+  		// ({foo:obj.prop,bar:arr[0]} = {foo:123,bar:true});
+  		// console.log(obj,arr);
+
+  		// var {x=3} = {};
+  		// console.log(x);
+
+  		// var {x,y = 5} = {x:1}
+  		// console.log(x,y);
+
+  		// var {x:y=3} = {};
+  		// console.log(y);
+
+  		// var {x:y = 3} ={x:5};
+  		// console.log(y);
+
+  		// var {message:msg='something went wrong'} = {};
+  		// console.log(msg);
+
+  		// var{x = 3} = {x:undefined};
+  		// console.log(x);
+
+  		// var {x = 3} = {x:null};
+  		// console.log(x);
+
+  		// let _tmp = {baz:'baz'};
+  		// console.log(_tmp.foo.bar);
+
+  		// let x;
+  		// {x} = {x:1};
+  		// console.log(x);
+
+  		// let x;
+  		// ({x} = {x:1});
+  		// console.log(x);
+
+  		// let arr = [1,2,3];
+  		// let {0:first,[arr.length-1]:last} = arr;
+  		// console.log(first,last);
+
+  		// const [a,b,c,d,e] = 'hello';
+  		// console.log(a,b,c,d,e);
+
+  		// let {length:len} = 'hello';
+  		// console.log(len);
+
+  		(function(){
+  			'use strict';
+  			console.log(0o11 === 11);
+  			console.log(Number('0b111'));
+  			console.log(Number('0o10'));
+  		})()
+
+  		
+
+
+
+
+
+	</script>
+</body>
+</html>
