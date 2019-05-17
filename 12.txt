@@ -1,0 +1,79 @@
+dispatch执行action里的方法。
+commit执行mutation里的方法。
+
+
+个人中心接口
+school_info
+my_school    1809027778  a00000  线上地址：https://www.hrloo.com/hr/elp/load_tpl/index#/person
+index.html 存放的位置 E:\htdocs\hrloo56.com\web\source\templates\default\elp\company
+
+
+bug管理系统滴答清单：https://dida365.com/#p/5ca48a02e4b0d3df8811b6f4/tasks
+
+1.数组的reduce方法
+2.复习资料：https://yuchengkai.cn/docs/frontend/
+3.http://note.youdao.com/noteshare?id=f58d61e0b6f2206b093bfb7c3569155a
+4.http://note.youdao.com/noteshare?id=60b590e7fd25e3285554d58363233f59
+5.深拷贝与浅拷贝的区别：https://www.cnblogs.com/echolun/p/7889848.html
+6.SyntaxError：语法错误
+7.null==undefined详细解释 https://blog.csdn.net/u010297791/article/details/77374732
+8：下面的规则用于判定==运算符比较的两个值是否相等： 
+
+       1.如果两个值具有相同的类型，那么就检测它们的等同性。如果这两个值完全相同，它们就相等。如果它们不完全相同，则它们不相等。 
+
+       2.如果两个值的类型不同，它们仍然可能相等。用下面的规则和类型转换来检测它们的相等性： 
+           
+2.1 如果一个值是 null,另一个值是undefined,它们相等。 
+           
+2.2 如果一个值是数字，另一个值是字符串，把字符串转换为数字，再用转换后的值进行比较。 
+           
+2.3 如果一个值 是true，将它转换成1，再进行比较。如果一个值为false，把它转换成0，再进行比较。 
+           
+2.4 如果一个值是对象，另一个值是数字或者字符串，将对象转换成原始类型的值，再进行比较。 
+           
+2.5 其他的数值组合是不相等的。
+9：http详解：https://zhuanlan.zhihu.com/p/60450391
+
+
+编辑器：http://dev.dianmi365.com/docs/fe/ui-web/editor
+
+
+
+
+
+
+
+
+
+
+程序猿-灵长类动物的近亲，瞎长动物
+
+顾名思义，不怎么出门的它们随便长长就可以了
+
+每只程序猿自诞生之日起就习惯在两棵树之间跳来跳去
+
+一棵是二叉树，另一棵还是二叉树
+
+这只小家伙是一只入行两年的程序猿
+
+长期没有搞卫生使得它毛发茂盛
+
+今天它发现了一只巨大的bug(虫子),它试图修复
+
+但这只bug牢牢地粘在二叉树上
+
+不出意外的话，小家伙又要加班了
+
+虽然看似食物链顶端的灵长类动物但程序猿也有一种天敌——作蜥                                                                      
+
+不规律的作蜥是程序猿的杀手
+
+一旦被蜥击倒等待它的就只剩下无尽的ICU了
+
+即便没有被击倒，被996折磨的程序猿也总是无精打采
+
+甚至站着都能睡着
+
+而在梦里
+
+他们终于有机会调戏自己一生之敌“产品经鲤”了
